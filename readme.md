@@ -15,7 +15,7 @@
 #### How to look at my app
 
 ```sh
-1. Follow the link 
+https://maxnhub.github.io/hedgehog/
 ```
 
 #### How to install and build my app
