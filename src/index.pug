@@ -1,0 +1,105 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(href="https://img.icons8.com/color/48/000000/sonic-the-hedgehog-1.png" rel="shortcut icon" type="image/x-icon")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+    title Hedgehog | main page
+  body
+    .wrapper
+      .maincontent
+        //- +image('content/user.jpg', 'user-pic')
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        .container
+          header.header
+            a.hamburger-menu(href="#")
+              .hamburger-menu__stick
+            +image('content/logo.png', 'header__logo')
+            .header__list
+              a(href="#").header__list-item Наши ежи
+              a(href="#").header__list-item О ежах
+              a(href="#").header__list-item Новости
+            form.header__search(action="search")
+              input.header__search-field(type="search")
+              button.header__search-button(type="submit")
+                +icon('finder', 'header__search-icon')
+            a.header__phone(href="tel:+72121221212") +7 (212) 122-12-12
+        section.content
+          .container.container--slider
+            .content__slider.swiper-container
+              
+              ul.content__slider-list.swiper-wrapper
+                li.content__slider-item.content__slider-item--ezhy.swiper-slide
+                  h2.content__slider-title Однажды Ежи съел Петруччо
+                  p.content__slider-text Ежи никогда больше ничего не ел, потому что ничего не было. Только пил.
+                  a.content__slider-button(href="#") Прочитать всю историю
+                li.content__slider-item.content__slider-item--facts.swiper-slide
+                  h2.content__slider-title 25 интересных фактов о ежах
+                  p.content__slider-text При слове «ёж» многим из нас сразу представляется картинка из детской книжки, на которой весёлое ежиное семейство тащит в норку наколотые на иголки грибочки. На самом же деле ежи — это хитрые и умные хищники, которые охотно питаются не только грибами и ягодами, но и вообще всем, что сумеют найти. Или кого сумеют поймать.
+                  a.content__slider-button(href="http://xn--80aexocohdp.xn--p1ai/25-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BD%D1%8B%D1%85-%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D0%B2-%D0%BE-%D0%B5%D0%B6%D0%B0%D1%85/") Прочитать всю историю
+                li.content__slider-item.content__slider-item--third.swiper-slide
+                  h2.content__slider-title Еж — самый известный обладатель колючек
+                  p.content__slider-text При малейшей опасности он сворачивается клубком, стараясь уколоть того, кто представляет опасность.
+                  a.content__slider-button(href="https://theanimalw.com/interesnye-fakty-o-ezhax/") Прочитать всю историю
+              .content__slider-arrow.content__slider-arrow--prev
+                .content__slider-arrow-tick
+              .content__slider-arrow.content__slider-arrow--next
+                .content__slider-arrow-tick
+          .container 
+            .content__desc
+              h1.content__desc-title Мы продаем самых качественных ежей
+              p.content__desc-subtitle наши ежи вас никогда не подведут
+              ul.content__desc-list
+                li.content__desc-item
+                  +image('content/cont1.png', 'content__desc-item-image')
+                  h3.content__desc-item-title Ежи с ушами
+                  p.content__desc-item-text Наши ежи беззвучно топают по ночам, быстро сворачиваются в комок, соответсвуют всем стандартам качества
+                li.content__desc-item
+                  +image('content/cont2.png', 'content__desc-item-image')
+                  h3.content__desc-item-title Ежи без ушей
+                  p.content__desc-item-text Наши ежи беззвучно топают по ночам, быстро сворачиваются в комок, соответсвуют всем стандартам качества
+                li.content__desc-item
+                  +image('content/cont3.png', 'content__desc-item-image')
+                  h3.content__desc-item-title Весёлые ежи
+                  p.content__desc-item-text Наши ежи беззвучно топают по ночам, быстро сворачиваются в комок, соответсвуют всем стандартам качества
+        section.history
+          .container
+            .history__field
+              +image('content/cont4.png', 'history__field-image history__field-image--first')
+              p.history__field-desc.history__field-desc--first Обыкновенный ёж — животное небольших размеров. Длина его тела составляет 20—30 см, хвоста — около 3 см, масса тела — 700—800 г.Уши относительно небольшие (обычно меньше 3,5 см). Морда вытянутая. Нос у животного острый и постоянно влажный. У обыкновенных ежей, обитающих на Кипре, уши более крупные. На верхней челюсти у ежей 20 мелких острых зубов, а на нижней — 16. Верхние резцы широко расставлены, оставляя место для прикуса нижним резцам. Голова относительно крупная, клинообразная, со слабоудлинённым лицевым отделом. На лапах по 5 пальцев с острыми когтями. Задние конечности более длинные, чем передние. Иглы у обыкновенного ежа короткие, не более 3 см. ».  
+              +image('content/cont5.png', 'history__field-image history__field-image--second')
+              p.history__field-desc.history__field-desc--second 
+                | Обыкновенный ёж — это животное, активное в ночное время суток.Не любит надолго уходить из своего дома. День ежи проводят в гнезде или других укрытиях.
+                br
+                br
+                | Гнёзда строят в кустах, ямах, пещерах, заброшенных норах грызунов или в корнях деревьев. Обычно гнездо занимает в диаметре 15—20 см, в нём находится подстилка из сухой травы или листьев, мха. При помощи длинных средних пальцев на ногах ежи ухаживают за своими колючками. Грудь животные вылизывают языком. Самцы агрессивны друг к другу, ревностно охраняют свои участки. Площадь таких участков составляет у самцов 7—39 га, а у самок — 6—10 га.
+        footer.footer
+          .container
+            .footer__field
+              +image('content/logowhite.png', 'footer__field-image')
+              ul.footer__field-list
+                li.footer__field-item
+                  a.footer__field-item-title(href="#") Наши ежи
+                  a.footer__field-item-link(href="#") Ежи с ушами
+                  a.footer__field-item-link(href="#") Ежи без ушей
+                  a.footer__field-item-link(href="#") Весёлые ежи
+                  a.footer__field-item-link(href="#") Грустные ежи
+                  a.footer__field-item-link(href="#") Красивые ежи
+                li.footer__field-item
+                  a.footer__field-item-title(href="#") О ежах
+                  a.footer__field-item-link(href="#") Рейтинги
+                  a.footer__field-item-link(href="#") История создания
+                li.footer__field-item
+                  a.footer__field-item-title(href="#") Новости
+                  a.footer__field-item-link(href="#") В мире
+                  a.footer__field-item-link(href="#") В стране
+              a.footer__field-phone(href="tel:+72121221212") +7 (212) 122-12-12
+              button.footer__field-button(type="button") Отправить благодарность создателям
+    script(src="https://unpkg.com/swiper/js/swiper.js")
+    script(src="https://unpkg.com/swiper/js/swiper.min.js")

@@ -1,0 +1,93 @@
+.footer {
+  padding: 50px 0;
+  background: #363636;
+  color: #fff;
+  &__field {
+    display: grid;
+    grid-template-areas: "logo list . phone"
+    "button button . .";
+    grid-template-columns: 10% 50% 15% 15%;
+    grid-gap: 30px;
+    @include tablets {
+      grid-template-areas: "logo list"
+      "button phone";
+      grid-template-columns: 15% 75%;
+      grid-gap: 30px;
+    }
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-image {
+      grid-area: logo;
+      @include phones {
+        margin-bottom: 15px;
+      }
+    }
+    &-list {
+      grid-area: list;
+      display: flex;
+      justify-content: space-between;
+      @include phones {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+      }
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      &-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        &:hover {
+          color: #0d8ec3;
+        }
+        @include phones {
+          margin-bottom: 10px;
+        }
+      }
+      &-link {
+        font-size: 18px;
+        &:hover {
+          color: #0d8ec3;
+        }
+        @include tablets {
+          display: none;
+        }
+        @include phones {
+          display: block;
+        }
+      }
+      @include phones {
+        margin-bottom: 25px;
+        align-items: center;
+      } 
+    }
+    &-phone {
+      grid-area: phone;
+      font-size: 20px;
+      font-weight: bold;
+      @include tablets {
+        text-align: right;
+      }
+      @include phones {
+        margin-bottom: 15px;
+      }
+    }
+    &-button {
+      grid-area: button;
+      padding: 10px 20px;
+      font-weight: bold;
+      background-color: #f1f1f1;
+      color: #000;
+      cursor: pointer;
+      width: 350px;
+      &:hover {
+        box-shadow: 0 0 12px 2px rgba(155, 155, 155, 0.8);
+      }
+    }
+  }
+}
